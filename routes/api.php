@@ -29,7 +29,16 @@ Route::put('/prodi/{id}', [ProdiController::class, 'update']);
 Route::delete('/prodi/{id}', [ProdiController::class, 'destroy']);
 
 Route::get('/kategori', [KategoriController::class, 'index']);
+Route::post('/kategori', [KategoriController::class, 'store']);
+Route::put('/kategori/{id}', [KategoriController::class, 'update']);
+Route::delete('/kategori/{id}', [KategoriController::class, 'destroy']);
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
+Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update']);
+Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
 
 Route::get('/media', [MediaController::class, 'index']);
+Route::post('/media', [MediaController::class, 'store']);
+Route::put('/media/{id}', [MediaController::class, 'update']);
+Route::delete('/media/{id}', [MediaController::class, 'destroy']);

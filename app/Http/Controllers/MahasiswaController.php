@@ -35,9 +35,9 @@ class MahasiswaController extends Controller
     {
         // validasi input
         $validator = Validator::make($request->all(), [
-            'nim' => 'required|unique:mahasiswa,nim',
-            'nama_lengkap' => 'required|string',
-            'prodi_id' => 'required|exists:prodi,prodi_id'
+            'nim' => 'required',
+            'nama_lengkap' => 'required',
+            'prodi_id' => 'required',
         ]);
 
         // jika validasi gagal
@@ -81,9 +81,9 @@ class MahasiswaController extends Controller
     {
         // validasi input update
         $validator = Validator::make($request->all(), [
-            'nim' => 'required|unique:mahasiswa,nim,' . $id,
-            'nama_lengkap' => 'required|string',
-            'prodi_id' => 'required|exists:prodi,prodi_id'
+            'nim' => 'required',
+            'nama_lengkap' => 'required',
+            'prodi_id' => 'required',
         ]);
 
         if ($validator->fails()) {
